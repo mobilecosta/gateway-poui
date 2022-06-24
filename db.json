@@ -1,6 +1,6 @@
 {
   "empresas": {
-    "@count": 1,
+    "hasnext": 1,
     "data": [
       {
         "cpf_cnpj": "10480616000160",
