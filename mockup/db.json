@@ -1,0 +1,53 @@
+{
+  "empresas": {
+    "@count": 1,
+    "data": [
+      {
+        "cpf_cnpj": "10480616000160",
+        "created_at": "2022-05-04T23:31:17.275Z",
+        "updated_at": "2022-05-04T23:31:17.275Z",
+        "inscricao_estadual": "626.394.828.117",
+        "inscricao_municipal": "188290",
+        "nome_razao_social": "JFR TECNOLOGIA",
+        "nome_fantasia": "CONCEITHO",
+        "fone": "11 23240346",
+        "email": "mobile.costa@gmail.com",
+        "endereco": {
+          "logradouro": "RUA COROADOS",
+          "numero": "315",
+          "bairro": "VILA PIRES",
+          "codigo_municipio": "3547809",
+          "cidade": "SANTO ANDRE",
+          "uf": "SP",
+          "codigo_pais": "0105",
+          "pais": "BRASIL",
+          "cep": "09195410"
+        },
+        "optante_simples_nacional": true,
+        "regime_tributacao": 0,
+        "regime_especial_tributacao": 0,
+        "incentivo_fiscal": true,
+        "incentivador_cultural": true,
+        "nfe": {
+          "ambiente": "homologacao"
+        },
+        "mdfe": {
+          "ambiente": "homologacao"
+        },
+        "cte": {
+          "ambiente": "homologacao"
+        },
+        "cte_os": {
+          "ambiente": "homologacao"
+        },
+        "nfse": {
+          "ambiente": "homologacao",
+          "rps": {
+            "serie": "RPS"
+          },
+          "prefeitura": {}
+        }
+      }
+    ]
+  }
+}

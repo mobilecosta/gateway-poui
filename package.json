@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "mockup": "",
+    "serve": "json-server --watch ./mockup/db.json",
     "dev": "ts-node ./src/index.ts"
   },
   "repository": {
