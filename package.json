@@ -1,0 +1,25 @@
+{
+  "name": "gateway-poui",
+  "version": "1.0.0",
+  "description": "Repositorio typescript para adequação de json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mockup": "",
+    "dev": "ts-node ./src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mobilecosta/gateway-poui.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mobilecosta/gateway-poui/issues"
+  },
+  "homepage": "https://github.com/mobilecosta/gateway-poui#readme",
+  "dependencies": {
+    "json-serve": "^0.1.0"
+  }
+}
