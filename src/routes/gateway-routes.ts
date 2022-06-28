@@ -1,5 +1,6 @@
 import express from 'express';
 import httpProxy from 'express-http-proxy';
+import companyModel from '../models/company';
 
 const NUVEM_FISCAL = 'api.sandbox.nuvemfiscal.com.br';
 
@@ -29,19 +30,33 @@ const optionsProxy: httpProxy.ProxyOptions = {
   },
 };
 
+// Função auxiliar que prefixa
+function prefixObj(obj: object, prefix: string): object {
+  return Object.fromEntries(Object.entries(obj).map(([key, value]) => {
+    return [`${prefix}${key}`, typeof value === 'object' ? prefixObj(value, prefix) : value];
+  }));
+}
 
 // Esse método é responsavel por modificar a reposta da api nuvem fiscal e retornar para o cliente apenas os dados que ele irá utilizar.
-const empresasTransform = (proxyRes: any, proxyResData: any, userReq: any, userRes: any) => {
-  let data = JSON.parse(proxyResData.toString('utf8'));
+const transformResCompany = (proxyRes: any, proxyResData: any, userReq: any, userRes: any) => {
+  let resProxy = JSON.parse(proxyResData.toString('utf8'));
 
-  delete data['@count'];
-  data.hasnext = false;
+  delete resProxy['@count'];
+  resProxy.hasnext = false;
 
-  return JSON.stringify(data);
+  resProxy = resProxy.data.map((data: companyModel) => {
+
+    const newRes: any = Object.assign({}, data, prefixObj(data.endereco, 'endereco_'))
+    delete newRes['endereco'];
+
+    return newRes
+  })
+  return JSON.stringify(resProxy);
 }
 
 
-router.get('/empresas', httpProxy(NUVEM_FISCAL, { ...optionsProxy, userResDecorator: empresasTransform }));
+router.get('/empresas', httpProxy(NUVEM_FISCAL, { ...optionsProxy, userResDecorator: transformResCompany }));
+
 router.get('/cnpj/:id', httpProxy(NUVEM_FISCAL, optionsProxy));
 
 export default router;
