@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import router from './routes/gateway-routes';
 
-const PORT = process.env.PORT_HTTPS_PORTAL || 8080;
+const PORT = process.env.PORT_HTTPS_PORTAL || 4000;
 const HOSTNAME = process.env.HOSTNAME || 'http://localhost';
 const app = express();
 
