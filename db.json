@@ -6,41 +6,48 @@
         "id": "string",
         "created_at": "2022-06-28T17:24:46.055Z",
         "status": "processando",
-        "numero": "string",
-        "codigo_verificacao": "string",
+        "numero": "3025",
+        "codigo_verificacao": "375454585",
         "link_url": "string",
         "data_emissao": "2022-06-28T17:24:46.055Z",
         "ambiente": "homologacao",
         "referencia": "string",
+
+        "rps_identificacao_rps_numero": "3027",
+        "rps_identificacao_rps_serie": "UNICA",
+        "rps_identificacao_rps_tipo": "1",
+        "rps_data_emissao": "2022-06-28T17:24:46.055Z",
+
         "declaracao_prestacao_servico": {
           "rps": {
             "identificacao_rps": {
-              "numero": "string",
-              "serie": "string",
-              "tipo": "string"
+              "numero": "3027",
+              "serie": "UNICA",
+              "tipo": "1"
             },
             "data_emissao": "2022-06-28T17:24:46.055Z"
           },
+
           "competencia": "2022-06-28",
           "natureza_tributacao": 0,
           "prestador": {
-            "cpf_cnpj": "string",
-            "inscricao_municipal": "string",
-            "nome_razao_social": "string",
-            "nome_fantasia": "string",
-            "fone": "string",
+            "cpf_cnpj": "10480616000160",
+            "inscricao_municipal": "188290",
+            "nome_razao_social": "JFR TECNOLOGIA E SISTEMAS LTDA - EPP",
+            "nome_fantasia": "CONCEITHO TECNOLOGIA",
+            "fone": "35932673",
             "email": "string",
             "endereco": {
-              "logradouro": "string",
-              "numero": "string",
+              "logradouro": "RUA COROADOS",
+              "numero": "315",
               "complemento": "string",
-              "bairro": "string",
-              "codigo_municipio": "string",
+              "bairro": "VILA PIRES",
+              "codigo_municipio": "3547809",
               "cidade": "string",
-              "uf": "string",
+              "uf": "SP",
               "codigo_pais": "string",
-              "pais": "string",
-              "cep": "string"
+              "pais": "Brasil",
+              "cep": "9195410"
             },
             "optante_simples_nacional": true,
             "regime_tributacao": 0,
@@ -49,22 +56,22 @@
             "incentivador_cultural": true
           },
           "tomador": {
-            "cpf_cnpj": "string",
+            "cpf_cnpj": "03087463000120",
             "inscricao_municipal": "string",
-            "nome_razao_social": "string",
+            "nome_razao_social": "Leardini Contabilidade Ltda EPP",
             "fone": "string",
-            "email": "string",
+            "email": "oswaldo.leardini@yahoo.com.br",
             "endereco": {
-              "logradouro": "string",
-              "numero": "string",
+              "logradouro": "R ALVARES MACHADO",
+              "numero": "218",
               "complemento": "string",
-              "bairro": "string",
-              "codigo_municipio": "string",
+              "bairro": "CENTRO",
+              "codigo_municipio": "3529401",
               "cidade": "string",
-              "uf": "string",
+              "uf": "SP",
               "codigo_pais": "string",
-              "pais": "string",
-              "cep": "string"
+              "pais": "Brasil",
+              "cep": "9310020"
             }
           },
           "intermediario": {
