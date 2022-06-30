@@ -40,8 +40,6 @@ function prefixObj(obj: object, prefix: string): object {
 // Esse método é responsavel por modificar a reposta da api nuvem fiscal e retornar para o cliente apenas os dados que ele irá utilizar.
 const transformResCompany = (proxyRes: any, proxyResData: any, userReq: any, userRes: any) => {
   let resProxy = JSON.parse(proxyResData.toString('utf8'));
-  console.log(userReq.header('authorization'));
-
 
   delete resProxy['@count'];
   resProxy.hasnext = false;
@@ -57,8 +55,19 @@ const transformResCompany = (proxyRes: any, proxyResData: any, userReq: any, use
   return JSON.stringify(newRes);
 }
 
+const transformResCompanyID = (proxyRes: any, proxyResData: any, userReq: any, userRes: any) => {
+  let resProxy = JSON.parse(proxyResData.toString('utf8'));
+
+  const newRes: any = Object.assign({}, resProxy, prefixObj(resProxy.endereco, 'endereco_'))
+  delete newRes['endereco'];
+
+  return JSON.stringify(newRes);
+}
+
 
 router.get('/empresas', httpProxy(NUVEM_FISCAL, { ...optionsProxy, userResDecorator: transformResCompany }));
+
+router.get('/empresas/:cpf_cnpj', httpProxy(NUVEM_FISCAL, { ...optionsProxy, userResDecorator: transformResCompanyID }));
 
 router.get('/cnpj/:id', httpProxy(NUVEM_FISCAL, optionsProxy));
 
