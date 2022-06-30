@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import router from './routes/gateway-routes';
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 const HOSTNAME = process.env.HOSTNAME || 'http://localhost';
 
 const app = express();
@@ -23,22 +23,25 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true })); //
 
 
-app.use('/', (req, res, next) => {
-  const token = req.headers['authorization'];
-  // console.log(req.headers);
+// Authorization
+// app.use('/', (req, res, next) => {
+//   const token = req.headers['authorization'];
+//   console.log(req.headers);
 
-  try {
-    const token = req.header('authorization');
+//   try {
+//     const token = req.header('authorization');
 
-    if (token === authorizationToken) {
-      router(req, res, next);
-    } else {
-      res.status(401);
-    }
-  } catch (error) {
-    return res.status(401).send(error);
-  }
-});
+//     if (token === authorizationToken) {
+//       router(req, res, next);
+//     } else {
+//       res.status(401);
+//     }
+//   } catch (error) {
+//     return res.status(401).send(error);
+//   }
+// });
+
+app.use('/', router);
 
 app.listen(PORT, () => {
   console.log(`Gateway rodando na porta ${process.env.PORT}`);
