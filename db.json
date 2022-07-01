@@ -1,4 +1,40 @@
 {
+  "teste": [
+    {
+      "name": "name"
+    },
+    {
+      "nickname": "nickname"
+    },
+    {
+      "email": "email"
+    }
+  ],
+  "load-metadata": [
+    {
+      "name": "name"
+    },
+    {
+      "nickname": "nickname"
+    },
+    {
+      "email": "email"
+    }
+  ],
+  "metadata": {
+    "version": 1,
+    "fields": [
+      {
+        "property": "name"
+      },
+      {
+        "property": "nickname"
+      },
+      {
+        "property": "email"
+      }
+    ]
+  },
   "nfse": {
     "hasnext": false,
     "data": [
@@ -12,12 +48,10 @@
         "data_emissao": "2022-06-28T17:24:46.055Z",
         "ambiente": "homologacao",
         "referencia": "string",
-
         "rps_identificacao_rps_numero": "3027",
         "rps_identificacao_rps_serie": "UNICA",
         "rps_identificacao_rps_tipo": "1",
         "rps_data_emissao": "2022-06-28T17:24:46.055Z",
-
         "declaracao_prestacao_servico": {
           "rps": {
             "identificacao_rps": {
@@ -27,7 +61,6 @@
             },
             "data_emissao": "2022-06-28T17:24:46.055Z"
           },
-
           "competencia": "2022-06-28",
           "natureza_tributacao": 0,
           "prestador": {
@@ -168,6 +201,50 @@
         "endereco_codigo_pais": "0105",
         "endereco_pais": "BRASIL",
         "endereco_cep": "09195410",
+        "optante_simples_nacional": true,
+        "regime_tributacao": 0,
+        "regime_especial_tributacao": 0,
+        "incentivo_fiscal": true,
+        "incentivador_cultural": true,
+        "nfe": {
+          "ambiente": "homologacao"
+        },
+        "mdfe": {
+          "ambiente": "homologacao"
+        },
+        "cte": {
+          "ambiente": "homologacao"
+        },
+        "cte_os": {
+          "ambiente": "homologacao"
+        },
+        "nfse": {
+          "ambiente": "homologacao",
+          "rps": {
+            "serie": "RPS"
+          },
+          "prefeitura": {}
+        }
+      },
+      {
+        "cpf_cnpj": "35059574000110",
+        "created_at": "2019-10-02T23:31:17.275Z",
+        "updated_at": "2022-07-01T23:31:17.275Z",
+        "inscricao_estadual": "",
+        "inscricao_municipal": "188290",
+        "nome_razao_social": "GUILHERME SANTANA SANTOS 07431916507",
+        "nome_fantasia": "GUILHERME INFORMATICA",
+        "fone": "11 977408378",
+        "email": "guylhermesantos52@gmail.com",
+        "endereco_logradouro": "RUA MAGNOLIA",
+        "endereco_numero": "51",
+        "endereco_bairro": "VILA PIRES",
+        "endereco_codigo_municipio": "3547809",
+        "endereco_cidade": "SANTO ANDRE",
+        "endereco_uf": "SP",
+        "endereco_codigo_pais": "0105",
+        "endereco_pais": "BRASIL",
+        "endereco_cep": "09132655",
         "optante_simples_nacional": true,
         "regime_tributacao": 0,
         "regime_especial_tributacao": 0,
