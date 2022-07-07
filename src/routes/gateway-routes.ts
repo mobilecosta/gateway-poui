@@ -65,9 +65,12 @@ const transformResCompanyID = (proxyRes: any, proxyResData: any, userReq: any, u
 }
 
 
+/**EMPRESAS */
 router.get('/empresas', httpProxy(NUVEM_FISCAL, { ...optionsProxy, userResDecorator: transformResCompany }));
 
 router.get('/empresas/:cpf_cnpj', httpProxy(NUVEM_FISCAL, { ...optionsProxy, userResDecorator: transformResCompanyID }));
+
+router.patch('/empresas/:cpf_cnpj', httpProxy(NUVEM_FISCAL, optionsProxy));
 
 router.get('/cnpj/:id', httpProxy(NUVEM_FISCAL, optionsProxy));
 
