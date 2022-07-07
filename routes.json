@@ -1,0 +1,3 @@
+{
+  "/empresas/:cpf_cnpj": "/empresas/data"
+}

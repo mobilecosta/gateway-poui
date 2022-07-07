@@ -1,40 +1,4 @@
 {
-  "teste": [
-    {
-      "name": "name"
-    },
-    {
-      "nickname": "nickname"
-    },
-    {
-      "email": "email"
-    }
-  ],
-  "load-metadata": [
-    {
-      "name": "name"
-    },
-    {
-      "nickname": "nickname"
-    },
-    {
-      "email": "email"
-    }
-  ],
-  "metadata": {
-    "version": 1,
-    "fields": [
-      {
-        "property": "name"
-      },
-      {
-        "property": "nickname"
-      },
-      {
-        "property": "email"
-      }
-    ]
-  },
   "nfse": {
     "hasnext": false,
     "data": [
